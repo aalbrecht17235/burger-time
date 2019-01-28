@@ -1,4 +1,4 @@
-# burger-time
+# Burger Time
 
 
 # Friend Finder
