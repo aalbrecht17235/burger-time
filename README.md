@@ -1,8 +1,5 @@
 # Burger Time
 
-
-# Friend Finder
-
 Introduction
 ------------
 
