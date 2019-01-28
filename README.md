@@ -22,8 +22,8 @@ To install the application follow the instructions below:
 NPM Packages
 ------------
 
-*express
-*express-handlebars
-*mysql
+* express
+* express-handlebars
+* mysql
 
 
