@@ -22,3 +22,11 @@ To install the application follow the instructions below:
  npm install
 ```
 
+NPM Packages
+------------
+
+express
+express-handlebars
+mysql
+
+
