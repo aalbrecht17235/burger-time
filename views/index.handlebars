@@ -2,13 +2,13 @@
 
 <h2>Burgers Burgers Burgers</h2>
 
-<ul> Available Burgers
+<div> Available Burgers
   {{#each burgers}}
   {{#unless devoured}}
-  {{> burgers/burger-eat devour=true}}
+  {{> burgers devour=true}}
   {{/unless}}
   {{/each}}
-</ul>
+<div>
 
 <h2>Add a Burger</h2>
 <form class="create-form">
@@ -20,3 +20,11 @@
 
   <button type="submit">Add Burger</button>
 </form>
+
+ <div> <p>Eaten Burgers</p>
+          {{#each burgers}}
+          {{#if devoured}}
+          {{> eaten}}
+          {{/if}}
+          {{/each}}
+        </div>
