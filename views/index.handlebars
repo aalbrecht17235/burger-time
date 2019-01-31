@@ -1,11 +1,11 @@
 <h1>Burgs!</h1>
 
 <h2>Burgers Burgers Burgers</h2>
-
-<div> Available Burgers
+<p>Available Burgers</p>
+<div> 
   {{#each burgers}}
   {{#unless devoured}}
-  {{> burgers devour=true}}
+  {{> burgers/burgers devour=true}}
   {{/unless}}
   {{/each}}
   </div>
@@ -21,12 +21,13 @@
             <div class="form-group mx-auto">
             <label for="burger">Add Burger</label>
           </div>
+    </form>
 
-    <div>
       <p>Eaten Burgers</p>
+    <div>
       {{#each burgers}}
       {{#if devoured}}
-      {{> eaten}}
+      {{> burgers/eaten}}
       {{/if}}
       {{/each}}
     </div>

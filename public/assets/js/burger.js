@@ -1,6 +1,6 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
-    $("#devour").on("click", function(event) {
+    $(".devour").on("click", function(event) {
       var id = $(this).data("id");
       var newDevour = $(this).data("newdevour");
   
@@ -24,10 +24,11 @@ $(function() {
     // Adding a burger
     $(".create-form").on("submit", function(event) {
       event.preventDefault();
+      console.log("burger created");
   
       var newBurger = {
         burger_name: $("#burger").val().trim(),
-        devoured: true,
+        devoured: 0
       };
   
       // Send the POST request.

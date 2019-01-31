@@ -38,7 +38,7 @@ function printQuestionMarks(num) {
   }
 
 var orm = {
-    selectAll: function (table, callback) {
+    all: function (table, callback) {
         var queryString = 'SELECT * FROM ??'
         connection.query(queryString, [table], function (error, data) {
             if (error) {
@@ -47,7 +47,7 @@ var orm = {
             callback(data);
         });
     },
-    insertOne: function(table, cols, vals, callback) {
+    create: function(table, cols, vals, callback) {
         var queryString = "INSERT INTO " + table;
     
         queryString += " (";
@@ -67,7 +67,7 @@ var orm = {
           callback(result);
         });
       },
-    updateOne: function(table, objColVals, condition, callback) {
+    update: function(table, objColVals, condition, callback) {
         var queryString = "UPDATE " + table;
     
         queryString += " SET ";
