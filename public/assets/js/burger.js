@@ -14,7 +14,6 @@ $(function() {
         data: newDevourState
       }).then(
         function() {
-          console.log("changed Eaten to", newDevour);
           // Reload the page to get the updated list
           location.reload();
         }
@@ -24,7 +23,6 @@ $(function() {
     // Adding a burger
     $(".create-form").on("submit", function(event) {
       event.preventDefault();
-      console.log("burger created");
   
       var newBurger = {
         burger_name: $("#burger").val().trim(),
@@ -37,7 +35,6 @@ $(function() {
         data: newBurger
       }).then(
         function() {
-          console.log("created new burger");
           location.reload();
         }
       );
